@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Sebastian torres">
+    <link rel="stylesheet" href="./pagina.css">
+    <title>Galería de certificado</title>
+
+</head>
+
+<body>
+
+    <h1>Galería</h1>
+
+    <section>
+        <figure>
+            <img src="./fundamentos de python.png">
+            <figcaption>Fundamentos de python</figcaption>
+        </figure>
+        <figure>
+            <img src="./pensamiento logico.png">
+            <figcaption>Pensamiento logico</figcaption>
+        </figure>
+        <figure>
+            <img src="./gestion de las emociones.png">
+            <figcaption>Gestion de las emociones</figcaption>
+        </figure>
+        <figure>
+            <img src="./excel.png">
+            <figcaption>Excel</figcaption>
+        </figure>
+        <figure>
+            <img src="./redaccion y ortografia.png">
+            <figcaption>Redacción y ortográfia</figcaption>
+        </figure>
+        <figure>
+            <img src="./ser emprendedor.png">
+            <figcaption>Ser emprendedor</figcaption>
+        </figure>
+    </section>
+
+    <img id="imagenGrande">
+
+    <script>
+        const imagenes = document.querySelectorAll("section img");
+        const grande = document.getElementById("imagenGrande");
+
+        imagenes.forEach(function(img) {
+            img.addEventListener("click", function() {
+                grande.src = this.src;
+                grande.style.display = "block";
+            });
+        });
+    </script>
+
+</body>
+</html>
